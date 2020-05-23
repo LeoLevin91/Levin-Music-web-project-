@@ -3,6 +3,13 @@
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
     color: #fff;
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: #181818;
+    font-size: 14px;
+    min-width: 720px;
 }
 
 #nowPlayingBarContainer {
@@ -194,4 +201,49 @@
  .navItemBlock1 a:hover {
     color: #a0a0a0;
     transition: 0.4s;
+}
+
+#mainViewContainer {
+    margin-left: 245px;
+    padding-bottom: 90px;
+    width: calc(100% - 245px);
+}
+
+#mainContent {
+    padding: 0 20px;
+}
+
+.pageHeadingBig{
+    padding: 20px;
+    text-align: center;
+}
+
+.gridViewItem{
+    display: inline-block;
+    margin-right: 40px;
+    width: 29%;
+    max-width: 250px;
+    min-width: 200px;
+}
+
+.gridViewItem img{
+    width: 100%;
+}
+
+.gridViewItem img:hover{
+    outline: 3px solid #1DB96f;
+    transition: 0.25s;
+}
+
+.gridViewInfo {
+    font-weight: 300;
+    text-align: center;
+    padding: 5px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.gridViewItem a {
+    text-decoration: none;
 }

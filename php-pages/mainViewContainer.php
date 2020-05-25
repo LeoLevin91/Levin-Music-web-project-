@@ -1,5 +1,3 @@
-<div id="mainViewContainer">
-    <div id="mainContent">
         <h1 class="pageHeadingBig">You Might Also Like</h1>
 
         <div class="gridVievContainer">
@@ -20,7 +18,3 @@
             
             
             ?>
-
-        </div>
-    </div>     
-</div>

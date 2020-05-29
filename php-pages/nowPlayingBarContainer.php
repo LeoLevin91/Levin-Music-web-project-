@@ -173,14 +173,13 @@
                 $(".albumLink img").attr('src', artworkPath.artworkPath);
             })
 
-            console.log(audioElement);
             audioElement.setTrack(track);
-            playSong();
+            if(play == true){
+                playSong();
+            }
         });
 
-        if(play == true){
-            audioElement.play();
-        }
+
     }
     
     function playSong() {

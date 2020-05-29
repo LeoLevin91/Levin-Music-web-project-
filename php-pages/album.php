@@ -1,4 +1,4 @@
-<?php include("header.php")?>
+<?php include("includedFiles.php");?>
 
 
         <?php
@@ -66,4 +66,4 @@
             </ul>
         </div>
 
-<?php include("footer.php")?>
+<?php //include("footer.php")?>

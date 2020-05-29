@@ -1,3 +1,3 @@
-<?php include("header.php")?>
-            <?php include("mainViewContainer.php")?>
-<?php include("footer.php")?>
+<?php include("includedFiles.php");?>
+
+<script>openPage("browse.php")</script>

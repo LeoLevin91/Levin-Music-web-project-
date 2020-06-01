@@ -1,0 +1,51 @@
+.searchContainer {
+    background-color: #242424;
+    padding: 20px 20px;
+}
+
+.searchContainer h4 {
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.searchContainer .searchInput{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 62px;
+    letter-spacing: 2px;
+}
+
+
+.searchInput:focus {
+    border-bottom: 2px solid #1DB954;
+    transition: 0.05s;
+}
+
+input:focus {
+    outline: none;
+}
+
+.searchResultRow {
+    padding: 15px 10px;
+}
+
+.searchResultRow:hover {
+    background-color: #282828;
+}
+
+.searchResultRow .artistname span {
+    color: #fff;
+}
+
+.artistsContainer h2 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.noResults {
+    padding-bottom: 10px;
+    display: block;
+}

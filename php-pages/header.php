@@ -27,6 +27,7 @@
     <link href="../css/album-page-style.css" rel="stylesheet" type="text/css">
     <link href="../css/artist-page-style.css" rel="stylesheet"  type="text/css">
     <link href="../css/search-page-style.css" rel="stylesheet"  type="text/css">
+    <link href="../css/yourMusic-page.css" rel="stylesheet"  type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/script.js"></script>
     <title>Your Page</title>

@@ -9,6 +9,37 @@ var shuffle = false;
 var userLoggedIn;
 var timer;
 
+$(document).click(function(click) {
+    var target = $(click.target);
+
+    if(!target.hasClass("item") && !target.hasClass("optionsButton")){
+        hiddenOptionMenu();
+    }
+
+});
+
+$(window).scroll(function () {
+    hiddenOptionMenu();
+});
+
+$(document).on("change", "select.playlist", function () {
+    var select = $(this);
+    var playlistId = select.val();
+    var songId = select.prev(".songId").val();
+
+    $.post("../php-scripts/handler/ajax/addToPlaylist.php", {playlistId: playlistId, songId: songId})
+    .done(function (error) {
+
+        if(error != ""){
+           alert(error);
+           return;
+        };
+
+        hiddenOptionMenu();
+        select.val("");
+    });
+});
+
 
 function openPage(url) {
 
@@ -26,6 +57,24 @@ function openPage(url) {
     $("body").scrollTop(0);
     history.pushState(null, null, url);
 }
+
+function removeFromPlaylist(button, playlistId) {
+    var songId = $(button).prevAll(".songId").val();
+
+    $.post("../php-scripts/handler/ajax/removeFromPlaylist.php", { playlistId: playlistId, songId: songId })
+    .done(function(error) {
+        if(error != "") {
+            alert(error);
+            return;
+        }
+        //do something when ajax returns
+        openPage("playlist.php?id="+playlistId);
+    });
+}
+
+
+
+
 
 function createPlaylist() {
     console.log(userLoggedIn);
@@ -55,6 +104,29 @@ function deletePlaylist(playlistId) {
                 openPage("yourMusic.php");
             });
     }
+}
+
+function hiddenOptionMenu() {
+    var menu = $(".optionsMenu");
+    if(menu.css("display")!="none") {
+        menu.css("display", "none");
+    }
+}
+
+function showOptionsMenu(button) {
+    var songId = $(button).prevAll(".songId").val();
+    var menu = $(".optionsMenu");
+    var menuWidth = menu.width();
+    menu.find(".songId").val(songId);
+
+
+    var scrollTop = $(window).scrollTop();
+    var elementOffset = $(button).offset().top;
+
+    var top = elementOffset - scrollTop;
+    var left = $(button).position().left;
+
+    menu.css({"top": top + "px", "left": left - menuWidth + "px", "display": "inline"});
 }
 
 

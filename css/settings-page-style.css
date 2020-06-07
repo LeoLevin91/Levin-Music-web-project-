@@ -1,0 +1,12 @@
+.buttonItems button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.userInfo h1 {
+    text-align: center;
+    padding-bottom: 30px;
+
+}
